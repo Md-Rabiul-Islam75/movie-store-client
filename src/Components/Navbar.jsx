@@ -33,7 +33,7 @@ const Navbar = () => {
 
           <Link to={"/addMovie"} className="btn btn-link">Add Movie</Link>
            <Link to={"/allMovie"} className="btn btn-link">All Movie</Link>
-          <button className="btn btn-link">Favourite Movie</button>
+          <Link to={"/favourite"} className="btn btn-link">Favourite Movie</Link>
          
         </div>
 

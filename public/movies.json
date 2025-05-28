@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "_id": 1,
     "moviePoster": "https://i.ibb.co/s9WYwB6W/Inception.jpg",
     "movieTitle": "Inception",
     "movieGenre": "Sci-Fi / Thriller",
@@ -9,7 +9,7 @@
     "movieRating": 8.8
   },
   {
-    "id": 2,
+    "_id": 2,
     "moviePoster": "https://i.ibb.co/ZpBVGxwR/The-Dark-Knight.jpg",
     "movieTitle": "The Dark Knight",
     "movieGenre": "Action / Crime / Drama",
@@ -18,7 +18,7 @@
     "movieRating": 9.0
   },
   {
-    "id": 3,
+    "_id": 3,
     "moviePoster": "https://i.ibb.co/jv5PyyYJ/Interstellar.jpg",
     "movieTitle": "Interstellar",
     "movieGenre": "Adventure / Drama / Sci-Fi",
@@ -27,7 +27,7 @@
     "movieRating": 8.6
   },
   {
-    "id": 4,
+    "_id": 4,
     "moviePoster": "https://i.ibb.co/kVcThzL9/Avengers.jpg",
     "movieTitle": "Avengers: Endgame",
     "movieGenre": "Action / Adventure / Drama",
@@ -36,7 +36,7 @@
     "movieRating": 8.4
   },
   {
-    "id": 5,
+    "_id": 5,
     "moviePoster": "https://i.ibb.co/xnHsC3x/Avengers-The-Kang-Dynasty.jpg",
     "movieTitle": "Avengers: The Kang Dynasty",
     "movieGenre": "Action / Superhero / Sci-Fi",
@@ -45,7 +45,7 @@
     "movieRating": null
   },
   {
-    "id": 6,
+    "_id": 6,
     "moviePoster": "https://i.ibb.co/kVcThzL9/Avengers.jpg",
     "movieTitle": "Parasite",
     "genre": "Drama / Thriller",

@@ -16,7 +16,7 @@ const FeaturedMovies = () => {
 
             <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
              {
-                movies.map(movie => <Movie key={movie.id} movie = {movie}></Movie>)
+                movies.map(movie => <Movie key={movie._id} movie = {movie}></Movie>)
              }
             </div>
 

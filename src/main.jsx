@@ -14,6 +14,10 @@ import Main from './Pages/Main.jsx';
 import ErrorPage from './Pages/ErrorPage.jsx';
 import AllMovie from './Pages/AllMovie.jsx';
 import MovieDetails from './Pages/MovieDetails.jsx';
+import DataProvider from './provider/DataProvider.jsx';
+import FavouritePage from './Pages/FavouritePage.jsx';
+import Register from './Pages/Register.jsx';
+import Login from './Pages/Login.jsx';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +30,14 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>
+      },
+      {
+       path: "/register",
+       element: <Register></Register>
+      },
+      {
+        path: "/login",
+        element: <Login></Login>
       },
       {
         path: "/addMovie",
@@ -44,6 +56,11 @@ const router = createBrowserRouter([
       },
 
       {
+        path: "/favourite",
+        element: <FavouritePage></FavouritePage>
+      },
+
+      {
         path: "updateMovie",
         element: <UpdateMovie></UpdateMovie>
       }
@@ -58,6 +75,9 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <DataProvider>
+        <RouterProvider router={router} />
+    </DataProvider>
+   
   </StrictMode>,
 )

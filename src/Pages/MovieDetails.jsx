@@ -1,11 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useLocation } from "react-router-dom";
+import { DataContext } from "../provider/DataProvider";
 
 const MovieDetails = () => {
   const location = useLocation();
   const { movie } = location.state || {};
 
   if (!movie) return <p>No movie data found.</p>;
+
+  const {favourite, setFavourite} = useContext(DataContext);
+
+ const handleFavourite = () => {
+  const alreadyExists = favourite.find(fav => fav._id === movie._id);
+  if (alreadyExists) {
+    alert('This movie is already in your Favourite list.');
+    return;
+  }
+  setFavourite([...favourite, movie]);
+  alert('This movie added to your Favourite list.');
+};
 
   return (
     <div className="p-6">
@@ -23,7 +36,7 @@ const MovieDetails = () => {
           <h1>Movie Rating: {movie.movieRating}</h1>
           <div className="flex justify-between">
             <button className="btn bg-red-500 p-5">Delete</button>
-            <button className="btn bg-green-500 p-5">Add to Favourite</button>
+            <button onClick={handleFavourite} className="btn bg-green-500 p-5">Add to Favourite</button>
           </div>
         </div>
       </div>
