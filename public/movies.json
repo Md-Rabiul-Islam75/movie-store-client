@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "moviePoster": "https://i.ibb.co/s9WYwB6W/Inception.jpg",
+    "movieTitle": "Inception",
+    "movieGenre": "Sci-Fi / Thriller",
+    "movieDuration": "2h 28min",
+    "movieReleaseyear": 2010,
+    "movieRating": 8.8
+  },
+  {
+    "id": 2,
+    "moviePoster": "https://i.ibb.co/ZpBVGxwR/The-Dark-Knight.jpg",
+    "movieTitle": "The Dark Knight",
+    "movieGenre": "Action / Crime / Drama",
+    "movieDuration": "2h 32min",
+    "releaseYear": 2008,
+    "movieRating": 9.0
+  },
+  {
+    "id": 3,
+    "moviePoster": "https://i.ibb.co/jv5PyyYJ/Interstellar.jpg",
+    "movieTitle": "Interstellar",
+    "movieGenre": "Adventure / Drama / Sci-Fi",
+    "movieDuration": "2h 49min",
+    "releaseYear": 2014,
+    "movieRating": 8.6
+  },
+  {
+    "id": 4,
+    "moviePoster": "https://i.ibb.co/kVcThzL9/Avengers.jpg",
+    "movieTitle": "Avengers: Endgame",
+    "movieGenre": "Action / Adventure / Drama",
+    "movieDuration": "3h 1min",
+    "releaseYear": 2019,
+    "movieRating": 8.4
+  },
+  {
+    "id": 5,
+    "moviePoster": "https://i.ibb.co/xnHsC3x/Avengers-The-Kang-Dynasty.jpg",
+    "movieTitle": "Avengers: The Kang Dynasty",
+    "movieGenre": "Action / Superhero / Sci-Fi",
+    "movieDuration": "TBD",
+    "releaseYear": 2026,
+    "movieRating": null
+  },
+  {
+    "id": 6,
+    "moviePoster": "https://i.ibb.co/kVcThzL9/Avengers.jpg",
+    "movieTitle": "Parasite",
+    "genre": "Drama / Thriller",
+    "movieDuration": "2h 12min",
+    "releaseYear": 2019,
+    "movieRating": 8.5
+  }
+]
