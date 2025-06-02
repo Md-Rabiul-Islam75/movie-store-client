@@ -5,13 +5,13 @@ export const DataContext = createContext();
 
 const DataProvider = ({children}) => {
     const [user, setUser] = useState(null);
-    const [favourite, setFavourite] = useState([]);
+    const [favourites, setFavourites] = useState([]);
 
     const data = {
         user,
         setUser,
-        favourite,
-        setFavourite
+        favourites,
+        setFavourites
     };
 
     return (

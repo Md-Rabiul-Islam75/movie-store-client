@@ -8,15 +8,15 @@ const MovieDetails = () => {
 
   if (!movie) return <p>No movie data found.</p>;
 
-  const {favourite, setFavourite} = useContext(DataContext);
+  const {favourites, setFavourites} = useContext(DataContext);
 
  const handleFavourite = () => {
-  const alreadyExists = favourite.find(fav => fav._id === movie._id);
+  const alreadyExists = favourites.find(fav => fav._id === movie._id);
   if (alreadyExists) {
     alert('This movie is already in your Favourite list.');
     return;
   }
-  setFavourite([...favourite, movie]);
+  setFavourites([...favourites, movie]);
   alert('This movie added to your Favourite list.');
 };
 
