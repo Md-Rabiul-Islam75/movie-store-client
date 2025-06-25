@@ -3,7 +3,7 @@ import userIcon from "../assets/user.png";
 import logo from "../assets/logo_of_adventure.png";
 import { useContext } from "react";
 import { DataContext } from "../provider/DataProvider";
-import { getAuth } from "firebase/auth";
+import { getAuth, signOut } from "firebase/auth";
 //import { useContext } from "react";
 //import { DataContext } from "../provider/DataProvider";
 //import { getAuth, signOut } from "firebase/auth";

@@ -13,7 +13,7 @@ const Register = () => {
     const [success, setSuccess] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
 
-    const {createUser, updateUser} = useContext(DataContext);
+    const {user, setUser, createUser, updateUser} = useContext(DataContext);
 
     
 
@@ -53,6 +53,7 @@ const Register = () => {
         .then((result) => {
           const user = result.user;
           console.log(user);
+          setUser(user);
           setSuccess(true);
           // ...
 

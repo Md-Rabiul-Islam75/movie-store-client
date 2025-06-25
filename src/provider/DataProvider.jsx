@@ -26,7 +26,7 @@ const DataProvider = ({children}) => {
         return  updateProfile(auth.currentUser, profile);
     }
 
-    console.log(user);
+    //console.log(user);
 
 
     const data = {
