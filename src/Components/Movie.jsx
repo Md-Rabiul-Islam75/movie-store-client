@@ -19,6 +19,7 @@ const Movie = ({ movie }) => {
             {movieGenre}
           </p>
           <div className="card-actions justify-end">
+            <button className="btn btn-warning">Update the Movie</button>
             <Link to={"/movieDetails"} state={{movie}} className="btn btn-primary">See Details</Link>
           </div>
         </div>

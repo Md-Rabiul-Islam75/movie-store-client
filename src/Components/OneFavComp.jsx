@@ -9,7 +9,7 @@ const OneFavComp = ({favourite}) => {
 
   return (
     <div>
-      <h2>All favourite page here: </h2>
+      {/* <h2>All favourite page here: </h2> */}
       <div className="card bg-base-100 w-96 shadow-sm">
         <figure className="px-10 pt-10">
           <img

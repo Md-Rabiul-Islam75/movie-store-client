@@ -26,6 +26,7 @@ const OneMovie = ({ movie }) => {
           </div>
           <h1>Movie Rating: {movieRating}</h1>
           <div className="card-actions justify-end">
+             <button className="btn btn-warning">Update the Movie</button>
             <Link to={"/movieDetails"} state={{ movie }} className="btn btn-primary">See Details</Link>
           </div>
         </div>

@@ -10,6 +10,7 @@ import { DataContext } from "../provider/DataProvider";
 
 const Login = () => {
   const {setUser} = useContext(DataContext);
+  const {signInUser} = useContext(DataContext);
   const [success, setSuccess] = useState(false);
   const [loginError, setLoginError] = useState("");
   //const emailRef = useRef();
@@ -26,6 +27,14 @@ const Login = () => {
     
     setSuccess(false);
     setLoginError("");
+
+     signInUser(email, password)
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
 
 
     // signInWithEmailAndPassword(auth, email, password)

@@ -1,7 +1,10 @@
 //import { createUserWithEmailAndPassword, getAuth, updateProfile } from "firebase/auth";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { DataContext } from "../provider/DataProvider";
+import { updateProfile } from "firebase/auth";
+import { auth } from "../firebase/firebase.init";
 //import { auth } from "../firebase.init";
 
 const Register = () => {
@@ -9,6 +12,8 @@ const Register = () => {
     const [showPassword, setShowPassword] = useState(false);
     const [success, setSuccess] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
+
+    const {createUser, updateUser} = useContext(DataContext);
 
     
 
@@ -34,14 +39,48 @@ const Register = () => {
           return;
         }
 
-        const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z]).{6,}$/;
+        // const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z]).{6,}$/;
 
-        if (!passwordRegex.test(password)) {
-          setErrorMessage(
-            "At least one uppercase, one lowercase character"
-          );
-          return;
-        }
+        // if (!passwordRegex.test(password)) {
+        //   setErrorMessage(
+        //     "At least one uppercase, one lowercase character"
+        //   );
+        //   return;
+        // }
+
+         
+        createUser(email, password)
+        .then((result) => {
+          const user = result.user;
+          console.log(user);
+          setSuccess(true);
+          // ...
+
+
+          const profile = {
+            displayName : name,
+            photoURL : photo
+         }
+
+         updateUser(profile)
+         //updateProfile(auth.currentUser, profile)
+         .then(() =>{
+          console.log('user profile updated')
+          console.log(user.displayName);
+         })
+         .catch(error => console.log('User profile update error'));
+
+         }) 
+
+
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          console.log(errorMessage);
+          setErrorMessage(error.message);
+          setSuccess(false);
+          // ..
+        });
 
 
 
@@ -137,7 +176,7 @@ const Register = () => {
 
               <button
                 onClick={() => setShowPassword(!showPassword)}
-                className="btn btn-xs absolute right-2 top-12"
+                className="btn btn-xs absolute right-2 top-8"
               >
                 {showPassword ? <FaEyeSlash /> : <FaEye />}
               </button>

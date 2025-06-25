@@ -1,8 +1,8 @@
 import React from 'react';
-import movie1 from '../../src/assets/Avengers.jpg'
-import movie2 from '../../src/assets/Inception.jpg'
-import movie3 from '../../src/assets/Interstellar.jpg'
-import movie4 from '../../src/assets/Avengers The Kang Dynasty.jpg'
+import movie1 from '../../src/assets/movie1.avif'
+import movie2 from '../../src/assets/movie2.avif'
+import movie3 from '../../src/assets/movie3.avif'
+import movie4 from '../../src/assets/movie4.avif'
 
 
 

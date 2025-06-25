@@ -1,24 +1,28 @@
 import { Link } from "react-router-dom";
 import userIcon from "../assets/user.png";
 import logo from "../assets/logo_of_adventure.png";
+import { useContext } from "react";
+import { DataContext } from "../provider/DataProvider";
+import { getAuth } from "firebase/auth";
 //import { useContext } from "react";
 //import { DataContext } from "../provider/DataProvider";
 //import { getAuth, signOut } from "firebase/auth";
 const Navbar = () => {
-  //const { user } = useContext(DataContext);
-  //console.log(user);
+  const { user } = useContext(DataContext);
+  console.log(user);
+ // console.log(user);
 
-//   const handleLogout = () => {
-//     const auth = getAuth();
-//     signOut(auth)
-//       .then(() => {
-//         // Sign-out successful.
-//         //console.log("Logout Successfull");
-//       })
-//       .catch((error) => {
-//         // An error happened.
-//       });
-//   };
+  const handleLogout = () => {
+    const auth = getAuth();
+    signOut(auth)
+      .then(() => {
+        // Sign-out successful.
+        console.log("Logout Successfull");
+      })
+      .catch((error) => {
+        // An error happened.
+      });
+  };
 
   return (
     <div className="">
@@ -41,7 +45,7 @@ const Navbar = () => {
           <Link to="/register" className="btn font-bold">
             Register
           </Link>
-          {/* <div>
+          <div>
             {user && user?.email ? (
               <button onClick={handleLogout} className="btn rounded-none">
                 LogOut
@@ -51,17 +55,17 @@ const Navbar = () => {
                 Login
               </Link>
             )}
-          </div> */}
+          </div>
 
           <div>
-            {/* {user && user?.email ? (
+            {user && user?.email ? (
               <div>
                 <img className="w-10 rounded-full" src={user.photoURL} alt="" />
               </div>
             ) : (
               <img className="w-10 rounded-full" src={userIcon} alt="" />
-            )} */}
-            <img className="w-10 rounded-full" src={userIcon} alt="" />
+            )}
+            {/* <img className="w-10 rounded-full" src={userIcon} alt="" /> */}
           </div>
         </div>
       </div>
