@@ -53,7 +53,7 @@ const Register = () => {
         .then((result) => {
           const user = result.user;
           console.log(user);
-          setUser(user);
+          //setUser(user);
           setSuccess(true);
           // ...
 
@@ -68,6 +68,9 @@ const Register = () => {
          .then(() =>{
           console.log('user profile updated')
           console.log(user.displayName);
+          console.log(user);
+          //setUser(user);
+          
          })
          .catch(error => console.log('User profile update error'));
 

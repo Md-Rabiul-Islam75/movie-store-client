@@ -8,7 +8,7 @@ import { getAuth, signOut } from "firebase/auth";
 //import { DataContext } from "../provider/DataProvider";
 //import { getAuth, signOut } from "firebase/auth";
 const Navbar = () => {
-  const { user } = useContext(DataContext);
+  const { user, setUser } = useContext(DataContext);
   console.log(user);
  // console.log(user);
 
@@ -17,6 +17,7 @@ const Navbar = () => {
     signOut(auth)
       .then(() => {
         // Sign-out successful.
+        setUser(null)
         console.log("Logout Successfull");
       })
       .catch((error) => {
@@ -58,7 +59,7 @@ const Navbar = () => {
           </div>
 
           <div>
-            {user && user?.email ? (
+            {user && user.email ?(
               <div>
                 <img className="w-10 rounded-full" src={user.photoURL} alt="" />
               </div>
