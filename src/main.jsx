@@ -8,7 +8,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import AddMovie from './Components/AddMovie.jsx';
-import UpdateMovie from './Components/UpdateMovie.jsx';
+
 import Home from './Pages/Home.jsx';
 import Main from './Pages/Main.jsx';
 import ErrorPage from './Pages/ErrorPage.jsx';
@@ -18,6 +18,7 @@ import DataProvider from './provider/DataProvider.jsx';
 import FavouritePage from './Pages/FavouritePage.jsx';
 import Register from './Pages/Register.jsx';
 import Login from './Pages/Login.jsx';
+import UpdateMovie from './Pages/UpdateMovie.jsx';
 
 const router = createBrowserRouter([
   {
@@ -45,6 +46,12 @@ const router = createBrowserRouter([
       },
 
       {
+        path: "/updateMovie/:id",
+        element: <UpdateMovie></UpdateMovie>,
+        loader: ({ params }) => fetch(`http://localhost:5000/movies/${params.id}`) 
+      },
+
+      {
         path: "/allMovie",
         element: <AllMovie></AllMovie>,
         loader: () => fetch('http://localhost:5000/movies')
@@ -58,13 +65,7 @@ const router = createBrowserRouter([
       {
         path: "/favourite",
         element: <FavouritePage></FavouritePage>
-      },
-
-      {
-        path: "updateMovie",
-        element: <UpdateMovie></UpdateMovie>
       }
-
 
 
 
