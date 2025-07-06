@@ -68,7 +68,7 @@ const MovieDetails = () => {
     <div className="p-6">
       <div className="card bg-base-100 w-96 shadow-sm">
         <figure>
-          <img src={movie.moviePoster} alt="Movie" />
+          <img src={movie.moviePoster} alt="Movie"   className="h-[250px] w-[180px] rounded-xl" />
         </figure>
         <div className="card-body">
           <h2 className="card-title">{movie.movieTitle}</h2>

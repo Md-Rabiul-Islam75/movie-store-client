@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import OneMovie from '../Components/OneMovie';
+import { DataContext } from '../provider/DataProvider';
 
 const AllMovie = () => {
+
+    // const {movies2, setMovies2} = useContext(DataContext);
+
+   
     
     const movies = useLoaderData();
     console.log(movies);
+
+    //  setMovies2(movies);
+
+    //  console.log(movies2)
 
 
     return (

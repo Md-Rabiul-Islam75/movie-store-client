@@ -12,6 +12,7 @@ const OneMovie = ({ movie }) => {
           <img
             src={moviePoster}
             alt="Movie"
+            className="h-[210px] w-[180px] rounded-xl"
           />
         </figure>
         <div className="card-body">

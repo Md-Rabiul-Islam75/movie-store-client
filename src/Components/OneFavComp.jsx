@@ -15,7 +15,8 @@ const OneFavComp = ({favourite}) => {
           <img
             src={moviePoster}
             alt="Movie"
-            className="rounded-xl"
+            className="h-[210px] w-[180px] rounded-xl"
+            
           />
         </figure>
         <div className="card-body items-center text-center">

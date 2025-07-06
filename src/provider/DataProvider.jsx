@@ -9,6 +9,8 @@ const DataProvider = ({children}) => {
     const [user, setUser] = useState(null);
      const [loading, setLoading] = useState(true);
     const [favourites, setFavourites] = useState([]);
+    const [movies2, setMovies2] = useState(null);
+
 
 
       const createUser = (email, password) =>{
@@ -36,7 +38,9 @@ const DataProvider = ({children}) => {
         setFavourites,
         createUser,
         signInUser,
-        updateUser
+        updateUser,
+        movies2,
+        setMovies2
     };
 
     return (
