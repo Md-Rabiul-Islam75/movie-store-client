@@ -35,7 +35,7 @@ const UpdateMovie = () => {
     console.log(updatedMovie);
 
     // send data to the server
-    fetch(`http://localhost:5000/movies/${_id}`, {
+    fetch(`https://movie-store-server-six.vercel.app/movies/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

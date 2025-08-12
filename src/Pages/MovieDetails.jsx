@@ -26,7 +26,7 @@ const MovieDetails = () => {
     console.log(_id);
 
     Swal.fire({
-      title: "Are you sure that you want to delete from your favourite one?",
+      title: "Are you sure that you want to delete from your current movie list?",
       text: "You won't be able to revert this!",
       icon: "warning",
       showCancelButton: true,
@@ -35,7 +35,7 @@ const MovieDetails = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/movies/${_id}`, {
+        fetch(`https://movie-store-server-six.vercel.app/movies/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -44,13 +44,13 @@ const MovieDetails = () => {
             if (data.deletedCount > 0) {
               Swal.fire({
                 title: "Deleted!",
-                text: "Your movie has been deleted from your favourite list.",
+                text: "Your movie has been deleted from your all movie list.",
                 icon: "success",
               });
             }
           });
 
-        //console.log("delete confirmed.");
+      
         console.log(favourites.length);
 
         const updatedFavourites = favourites.filter(

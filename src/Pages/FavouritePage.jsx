@@ -7,7 +7,7 @@ const FavouritePage = () => {
     console.log(favourites);
     return (
         <div>
-            <h3>No of favourite movie here: {favourites.length}</h3>
+            <h3>No. of favourite movie here: {favourites.length}</h3>
             
             <div className='grid grid-cols-1 md:grid-cols-3'>
             {

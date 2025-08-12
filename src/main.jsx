@@ -27,7 +27,13 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-         loader: () => fetch("http://localhost:5000/movies"),
+        loader: async () => {
+          const res = await fetch(
+            "https://movie-store-server-six.vercel.app/movies"
+          );
+          const data = await res.json();
+          return data;
+        },
       },
       {
         path: "/register",
@@ -39,20 +45,24 @@ const router = createBrowserRouter([
       },
       {
         path: "/addMovie",
-        element: <AddMovie></AddMovie>,
+        element: (
+             <PrivateRoute>
+                 <AddMovie></AddMovie>
+             </PrivateRoute>
+        ) 
       },
 
       {
         path: "/updateMovie/:id",
         element: <UpdateMovie></UpdateMovie>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/movies/${params.id}`),
+          fetch(`https://movie-store-server-six.vercel.app/movies/${params.id}`),
       },
 
       {
         path: "/allMovie",
         element: <AllMovie></AllMovie>,
-        loader: () => fetch("http://localhost:5000/movies"),
+        loader: () => fetch("https://movie-store-server-six.vercel.app/movies"),
       },
 
       {
@@ -66,7 +76,11 @@ const router = createBrowserRouter([
 
       {
         path: "/favourite",
-        element: <FavouritePage></FavouritePage>,
+        element: (
+          <PrivateRoute>
+            <FavouritePage></FavouritePage>
+          </PrivateRoute>
+        ) 
       },
     ],
   },

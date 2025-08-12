@@ -11,11 +11,12 @@ const FeaturedMovies = () => {
   const movieStore = useLoaderData();
 
   console.log(movieStore);
+  console.log("movieStore data:", movieStore);
 
   //console.log(movies2);
 
   useEffect(() => {
-    fetch("movies.json")
+    fetch("https://movie-store-server-six.vercel.app/movies")
       .then((res) => res.json())
       .then((data) => setMovies(data));
   }, []);

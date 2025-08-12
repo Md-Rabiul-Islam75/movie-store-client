@@ -24,7 +24,7 @@ const AddMovie = () => {
      console.log(newMovie);
 
      // send data to server
-     fetch('http://localhost:5000/movies', {
+     fetch('movie-store-server-six.vercel.app/movies', {
         method: 'POST',
         headers: {
             'content-type': 'application/json'
