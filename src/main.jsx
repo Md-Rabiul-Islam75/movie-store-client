@@ -16,6 +16,7 @@ import Register from "./Pages/Register.jsx";
 import Login from "./Pages/Login.jsx";
 import UpdateMovie from "./Pages/UpdateMovie.jsx";
 import PrivateRoute from "./PrivateRoute/PrivateRoute.jsx";
+import AboutUsPage from "./Pages/AboutUsPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,12 @@ const router = createBrowserRouter([
           return data;
         },
       },
+
+      {
+        path: "/aboutUs",
+        element: <AboutUsPage></AboutUsPage>
+      },
+
       {
         path: "/register",
         element: <Register></Register>,

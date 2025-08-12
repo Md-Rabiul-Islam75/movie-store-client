@@ -36,8 +36,9 @@ const Navbar = () => {
 
         <div>
           <Link to={"/"} className="btn btn-link">Home</Link>
+          <Link to={"/aboutUs"} className="btn btn-link">About Us</Link>
           <Link to={"/addMovie"} className="btn btn-link">Add Movie</Link>
-           <Link to={"/allMovie"} className="btn btn-link">All Movie</Link>
+          <Link to={"/allMovie"} className="btn btn-link">All Movie</Link>
           <Link to={"/favourite"} className="btn btn-link">Favourite Movie</Link>
          
         </div>
