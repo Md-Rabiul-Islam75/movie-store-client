@@ -61,7 +61,11 @@ const router = createBrowserRouter([
 
       {
         path: "/updateMovie/:id",
-        element: <UpdateMovie></UpdateMovie>,
+        element: (
+          <PrivateRoute>
+               <UpdateMovie></UpdateMovie>,
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
           fetch(`https://movie-store-server-six.vercel.app/movies/${params.id}`),
       },

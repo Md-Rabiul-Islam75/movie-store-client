@@ -10,3 +10,14 @@ Currently, two official plugins are available:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+# Project name: Movie Portal
+It's a user-friendly Movie Portal where you can simply exploring movies, viewing movie details, adding movies, and deleting movies while managing user favourites. This project include a dynamic user interface, robust functionality, and seamless user experience.
+
+## Project's main feature
+Home page.
+About Us page.
+Add Movie page.
+Update Movie page.
+Favourite Movie page.
