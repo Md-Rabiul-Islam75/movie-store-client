@@ -22,8 +22,7 @@ const FeaturedMovies = () => {
   }, []);
   return (
     <div className="">
-      <h2>Count of Featured Movies here: {movieStore.length}</h2>
-      <p>total movie here: {movieStore.length}</p>
+      <h2>Count of Featured Movies here: 6</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
         {movieStore.slice(0, 6).map((movie) => (
